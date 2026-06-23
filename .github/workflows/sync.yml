@@ -22,6 +22,6 @@ jobs:
       - name: Push to target repository
         run: |
           echo "Setting up remote repository..."
-          git remote add public "https://${{ secrets.PUBLIC_REPO_PAT }}@github.com/olivierbonte/Land_Atmosphere_interactions_notes_public.git"
+          git remote add public "https://${{ secrets.PUBLIC_REPO_PAT }}@github.com/olivierbonte/land-atmosphere-interactions-public.git"
           git config --unset-all http.https://github.com/.extraheader #From https://stackoverflow.com/questions/64374179/how-to-push-to-another-repository-in-github-actions
           git push public main --force
