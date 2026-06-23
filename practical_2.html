@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Practical 2: Role of land state and vegetation – Land-Atmosphere Interactions: Practicals</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./practical_1.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d5c5bdd0511db667e0be322bdf2182e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./figures/logo_H-CEL_no_background.svg" alt="" class="navbar-logo light-content">
+    <img src="./figures/logo_H-CEL_no_background.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Land-Atmosphere Interactions: Practicals</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+    <a href="https://github.com/olivierbonte/Land_Atmosphere_interactions_notes_public" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./Land-Atmosphere-Interactions--Practicals.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./practical_2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 2: Role of land state and vegetation</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./practical_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Practical 1: Atmospheric state and forcings</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./practical_2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 2: Role of land state and vegetation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#description-of-the-land-surface-conditions" id="toc-description-of-the-land-surface-conditions" class="nav-link active" data-scroll-target="#description-of-the-land-surface-conditions"><span class="header-section-number">2.1</span> Description of the land surface conditions</a>
+  <ul class="collapse">
+  <li><a href="#task-a" id="toc-task-a" class="nav-link" data-scroll-target="#task-a"><span class="header-section-number">2.1.1</span> Task A</a></li>
+  </ul></li>
+  <li><a href="#sec-pract_2_problem_1" id="toc-sec-pract_2_problem_1" class="nav-link" data-scroll-target="#sec-pract_2_problem_1"><span class="header-section-number">2.2</span> Problem 1</a>
+  <ul class="collapse">
+  <li><a href="#task-a-1" id="toc-task-a-1" class="nav-link" data-scroll-target="#task-a-1"><span class="header-section-number">2.2.1</span> Task A</a></li>
+  <li><a href="#task-b" id="toc-task-b" class="nav-link" data-scroll-target="#task-b"><span class="header-section-number">2.2.2</span> Task B</a></li>
+  <li><a href="#task-c" id="toc-task-c" class="nav-link" data-scroll-target="#task-c"><span class="header-section-number">2.2.3</span> Task C</a></li>
+  <li><a href="#sec-daily_EF" id="toc-sec-daily_EF" class="nav-link" data-scroll-target="#sec-daily_EF"><span class="header-section-number">2.2.4</span> Task D</a></li>
+  <li><a href="#task-e" id="toc-task-e" class="nav-link" data-scroll-target="#task-e"><span class="header-section-number">2.2.5</span> Task E</a></li>
+  </ul></li>
+  <li><a href="#sec-pract_2_problem_2" id="toc-sec-pract_2_problem_2" class="nav-link" data-scroll-target="#sec-pract_2_problem_2"><span class="header-section-number">2.3</span> Problem 2</a>
+  <ul class="collapse">
+  <li><a href="#task-a-2" id="toc-task-a-2" class="nav-link" data-scroll-target="#task-a-2"><span class="header-section-number">2.3.1</span> Task A</a></li>
+  <li><a href="#task-b-1" id="toc-task-b-1" class="nav-link" data-scroll-target="#task-b-1"><span class="header-section-number">2.3.2</span> Task B</a></li>
+  <li><a href="#task-c-1" id="toc-task-c-1" class="nav-link" data-scroll-target="#task-c-1"><span class="header-section-number">2.3.3</span> Task C</a></li>
+  </ul></li>
+  <li><a href="#additional-influence-of-vegetation" id="toc-additional-influence-of-vegetation" class="nav-link" data-scroll-target="#additional-influence-of-vegetation"><span class="header-section-number">2.4</span> Additional influence of vegetation</a></li>
+  <li><a href="#sec-pract_2_problem_3" id="toc-sec-pract_2_problem_3" class="nav-link" data-scroll-target="#sec-pract_2_problem_3"><span class="header-section-number">2.5</span> Problem 3</a>
+  <ul class="collapse">
+  <li><a href="#task-a-3" id="toc-task-a-3" class="nav-link" data-scroll-target="#task-a-3"><span class="header-section-number">2.5.1</span> Task A</a></li>
+  <li><a href="#task-b-2" id="toc-task-b-2" class="nav-link" data-scroll-target="#task-b-2"><span class="header-section-number">2.5.2</span> Task B</a></li>
+  <li><a href="#task-c-2" id="toc-task-c-2" class="nav-link" data-scroll-target="#task-c-2"><span class="header-section-number">2.5.3</span> Task C</a></li>
+  <li><a href="#task-d" id="toc-task-d" class="nav-link" data-scroll-target="#task-d"><span class="header-section-number">2.5.4</span> Task D</a></li>
+  </ul></li>
+  <li><a href="#sec-pract_2_problem_4" id="toc-sec-pract_2_problem_4" class="nav-link" data-scroll-target="#sec-pract_2_problem_4"><span class="header-section-number">2.6</span> Problem 4</a>
+  <ul class="collapse">
+  <li><a href="#task-a-4" id="toc-task-a-4" class="nav-link" data-scroll-target="#task-a-4"><span class="header-section-number">2.6.1</span> Task A</a></li>
+  <li><a href="#task-b-3" id="toc-task-b-3" class="nav-link" data-scroll-target="#task-b-3"><span class="header-section-number">2.6.2</span> Task B</a></li>
+  <li><a href="#task-c-3" id="toc-task-c-3" class="nav-link" data-scroll-target="#task-c-3"><span class="header-section-number">2.6.3</span> Task C</a></li>
+  </ul></li>
+  <li><a href="#the-influence-of-the-atmosphere-on-the-surface-fluxes" id="toc-the-influence-of-the-atmosphere-on-the-surface-fluxes" class="nav-link" data-scroll-target="#the-influence-of-the-atmosphere-on-the-surface-fluxes"><span class="header-section-number">2.7</span> The influence of the atmosphere on the surface fluxes</a></li>
+  <li><a href="#voluntary-problem-5" id="toc-voluntary-problem-5" class="nav-link" data-scroll-target="#voluntary-problem-5"><span class="header-section-number">2.8</span> Voluntary problem 5</a>
+  <ul class="collapse">
+  <li><a href="#task-a-5" id="toc-task-a-5" class="nav-link" data-scroll-target="#task-a-5"><span class="header-section-number">2.8.1</span> Task A</a></li>
+  <li><a href="#task-b-4" id="toc-task-b-4" class="nav-link" data-scroll-target="#task-b-4"><span class="header-section-number">2.8.2</span> Task B</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 2: Role of land state and vegetation</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In <a href="practical_1.html" class="quarto-xref"><span>Chapter 1</span></a>, the focus was on the effect of large-scale conditions on the daytime evolution of the boundary layer. With this understanding, we can now proceed to examine a second very important influence on the atmospheric boundary layer: <strong>land surface conditions</strong>. More specifically, CLASS will be used to investigate the following:</p>
+<ol type="1">
+<li>Explore land surface factors which control the magnitude of heat and moisture fluxes into the atmosphere</li>
+<li>Assess the possibility of a heatwave development over different regions of Belgium, which have different land covers and states.</li>
+</ol>
+<section id="description-of-the-land-surface-conditions" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="description-of-the-land-surface-conditions"><span class="header-section-number">2.1</span> Description of the land surface conditions</h2>
+<p>For this practical, we’ll focus on Belgium during a drought onset situation. From <a href="practical_1.html" class="quarto-xref"><span>Chapter 1</span></a>, we know that in this case the large-scale atmospheric state is characterised by a stationary, anticyclone (see <span class="math inline">\(AC\)</span> on <a href="practical_1.html#fig-cycl_anticycl" class="quarto-xref">Figure&nbsp;<span>1.2</span></a>).</p>
+<p>Although the large-scale atmospheric condition will be similar all over Belgium, this will not be te chase for the land conditions, which vary quite significantly over the country. This can lead to big differences in the partitioning of incoming solar radiation to heat and moisture fluxes, and as a result, lead to higher air temperature and humidity in some regions relative to others.</p>
+<p>The goal of this practical will be to use CLASS to explore the effect of different land surface conditions over Belgium on the radiation balance and the magnitude of heat and moisture fluxes.</p>
+<p>More specifically, we’ll focus on the difference in land cover and soil moisture (represented in CLASS in 2 layers with <span class="math inline">\(w_1\)</span> and <span class="math inline">\(w_2\)</span>), as given by <a href="#tbl-surface_conditions" class="quarto-xref">Table&nbsp;<span>2.1</span></a>.</p>
+<div id="tbl-surface_conditions" class="striped quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-surface_conditions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1: Observed values of volumetric soil moisture content (<span class="math inline">\(w_1 = w_2\)</span>) and dominant vegetation type for two Belgian region
+</figcaption>
+<div aria-describedby="tbl-surface_conditions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped caption-top table">
+<thead>
+<tr class="header">
+<th>Region</th>
+<th><span class="math inline">\(w_1 = w_2\)</span></th>
+<th>Vegetation cover</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>West Flanders</td>
+<td>0.18</td>
+<td>Short grass</td>
+</tr>
+<tr class="even">
+<td>East Wallonia</td>
+<td>0.31</td>
+<td>Broadleaf trees</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<section id="task-a" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="task-a"><span class="header-section-number">2.1.1</span> Task A</h3>
+<p>Over the course of the practical, fill in <a href="#tbl-results" class="quarto-xref">Table&nbsp;<span>2.2</span></a>. Remember that the evaporative fraction is defined as: <span class="math display">\[
+EF = \frac{\lambda E}{R_n - G}
+\]</span></p>
+<p>with <span class="math inline">\(\lambda E\)</span> the latent heat flux, <span class="math inline">\(R_n\)</span> the net surface radiation and <span class="math inline">\(G\)</span> the ground heat flux (all in W/m<span class="math inline">\(^2\)</span>). The strength of the coupling between <span class="math inline">\(EF\)</span> and soil moisture (<span class="math inline">\(SM\)</span>) is characterised by <span class="math inline">\(\frac{dEF}{dSM}\)</span>.</p>
+</section>
+</section>
+<section id="sec-pract_2_problem_1" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-pract_2_problem_1"><span class="header-section-number">2.2</span> Problem 1</h2>
+<p>First, the effect of different moisture content in the soil will be investigated. This will be done by setting up a dry (<span class="math inline">\(D\)</span>) and wet (<span class="math inline">\(W\)</span>) experiment with identical land cover conditions.</p>
+<p>To set up the experiments, start by opening the interactive window of CLASS model with its initial default setup. Then per tab, perform following changes:</p>
+<ul>
+<li><code>Basic</code>:
+<ul>
+<li><span class="math inline">\(t\)</span>: from 12 to 10 h</li>
+<li>Untick the box <code>Mixed-layer</code>. Remember from the introductory slides that the mixed layer model is disabled so that there is no feedback from atmosphere to the land (i.e.&nbsp;the effect of the land, soil moisture here, on the atmosphere is isolated)</li>
+</ul></li>
+<li><code>Rad/Geo</code>:
+<ul>
+<li>Tick the box <code>Radiation</code></li>
+</ul></li>
+<li><code>Surface</code>:
+<ul>
+<li>Tick the box <code>Surface scheme</code></li>
+<li>Do <strong>not</strong> tick<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> the box <code>Surface layer</code></li>
+</ul></li>
+</ul>
+<p>From the surface tab, one can see that for this first set of experiments, it is assumed that the dominant land cover is short grass and that the soil type is sandy loam.</p>
+<p>Now set up thee different experiments. Remark that volumetric soil moisture in the upper layer (<span class="math inline">\(w_1\)</span>) and lower layer (<span class="math inline">\(w_2\)</span>) are denoted by <span class="math inline">\(w_{\text{soil}1}\)</span> and <span class="math inline">\(w_{\text{soil}2}\)</span> in the <code>Surface</code> tab of the CLASS user interface. The values are the initial <span class="math inline">\(SM\)</span> values at the beginning of the simulation:</p>
+<ol type="1">
+<li>Dry (<span class="math inline">\(D\)</span>): <span class="math inline">\(w_1 = w_2 = 0.18\)</span>, <span class="math inline">\(SM\)</span> conditions reflective of West Flanders</li>
+<li>Wet (<span class="math inline">\(W\)</span>): <span class="math inline">\(w_1 = w_2 = 0.31\)</span>, <span class="math inline">\(SM\)</span> conditions reflective of East Wallonia</li>
+<li>Control (<span class="math inline">\(C\)</span>): <span class="math inline">\(w_1 = w_2 = 0.21\)</span></li>
+</ol>
+<p>Once the three experiments are run, exported the data following the instructions in <a href="https://ufora.ugent.be/d2l/le/content/1035474/viewContent/2536935/View"><code>CLASS_model_guide.pdf</code></a> so that these can be analysed in a programming language of your choice (i.e.&nbsp;MATLAB, R or Python). Note that contrary to the naming convention in the theory, <span class="math inline">\(R_n\)</span> is denoted by <span class="math inline">\(Q\)</span> in CLASS.</p>
+<section id="task-a-1" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="task-a-1"><span class="header-section-number">2.2.1</span> Task A</h3>
+<p>For every major term in the surface energy balance (i.e.&nbsp;<span class="math inline">\(R_n\)</span>, <span class="math inline">\(G\)</span>, <span class="math inline">\(\lambda E\)</span> and <span class="math inline">\(H\)</span>), build a graphic illustrating its temporal evolution for all three (<span class="math inline">\(W\)</span>, <span class="math inline">\(D\)</span> and <span class="math inline">\(C\)</span>) experiments. Label them properly and examine the differences in partitioning of the total energy <span class="math inline">\(R_n\)</span> into the ground heat flux, heat and moisture fluxes for various levels of soil moisture. Pay attention to the different value range on the graph axes when comparing the magnitudes of the energy balance components.</p>
+</section>
+<section id="task-b" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="task-b"><span class="header-section-number">2.2.2</span> Task B</h3>
+<p>Under which soil moisture conditions does most of the available energy at the surface (<span class="math inline">\(R_n – G\)</span>) go into the heating the atmosphere? To moistening the atmosphere?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When comparing the experiments, ignore the slight differences in the total energy <span class="math inline">\(R_n\)</span>, i.e assume that <span class="math inline">\(R_n\)</span> is the same for all the experiments.</p>
+</div>
+</div>
+</section>
+<section id="task-c" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="task-c"><span class="header-section-number">2.2.3</span> Task C</h3>
+<p>Calculate for each experiment the <span class="math inline">\(EF\)</span> parameter and plot its temporal evolution in a way that facilitates an easy comparison beteween the three experiments.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may need to adjust the axis limits on your graph, since the boundary values of <span class="math inline">\(EF\)</span> are too high due to the negative values of the fluxes around/just after sunrise.</p>
+</div>
+</div>
+</section>
+<section id="sec-daily_EF" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="sec-daily_EF"><span class="header-section-number">2.2.4</span> Task D</h3>
+<p>Compare the graphs and discuss what percentage of the total energy available at the surface was used for evaporation or heat release in every experiment case on average? For that, calculate the daily <span class="math inline">\(EF\)</span> value for every experiment using its daily sums (or averages) of <span class="math inline">\(\lambda E\)</span>, <span class="math inline">\(R_n\)</span> and <span class="math inline">\(G\)</span>.</p>
+<p>Based on this result, in which region, West Flanders or East Wallonia, would you expect larger increase in daytime air temperature and humidity considering differences in soil moisture values between experiments only?</p>
+</section>
+<section id="task-e" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="task-e"><span class="header-section-number">2.2.5</span> Task E</h3>
+<p>Fill out the feedback diagram in <a href="#fig-feedback_diagram_land" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> to complete the task. Use the <code>Graph</code> interface in CLASS to explore the diagram relationships if needed. Place the arrows only between dependent variables. For the conventions of dashed versus solid lines, see <a href="practical_1.html#sec-feedback" class="quarto-xref"><span>Section 1.5.3</span></a>.</p>
+<div id="fig-feedback_diagram_land" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-feedback_diagram_land-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-fig-width="6" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["$$SM$$"]
+    B["$$r_s$$"]
+    C["$$\lambda E$$"]
+    D["$$H$$"]
+    E["$$EF$$"]
+    F["$$T_s$$"]
+
+    A ~~~ B
+    B ~~~ C &amp; D 
+    C &amp; D ~~~ E
+    E ~~~ F 
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-feedback_diagram_land-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Feedback diagram illustrating the effect of <span class="math inline">\(SM\)</span> conditions on <span class="math inline">\(EF\)</span> and surface temperature (<span class="math inline">\(T_s\)</span>) via the concept of surface resistance <span class="math inline">\(r_s\)</span>
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-pract_2_problem_2" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-pract_2_problem_2"><span class="header-section-number">2.3</span> Problem 2</h2>
+<p>Use the daily EF values of the three experiments from the exercises in <a href="#sec-pract_2_problem_1" class="quarto-xref"><span>Section 2.2</span></a> and build a scatter plot of <span class="math inline">\(EF\)</span> dependence on soil moisture <span class="math inline">\(SM\)</span>. Use the x-axis to indicate the <span class="math inline">\(SM\)</span> value (i.e.&nbsp;<span class="math inline">\(w_1 = w_2\)</span> at the beginning of the simulation) and use the y-axis to mark the <span class="math inline">\(EF\)</span> (for a comparable figure from literature, see Figure 5 of <span class="citation" data-cites="Seneviratne_2010">Seneviratne et al. (<a href="references.html#ref-Seneviratne_2010" role="doc-biblioref">2010</a>)</span>).</p>
+<p>To have a clearer view of the relation between <span class="math inline">\(SM\)</span> and <span class="math inline">\(EF\)</span>, repeat the calculation of a daily <span class="math inline">\(EF\)</span> (as in <a href="#sec-daily_EF" class="quarto-xref"><span>Section 2.2.4</span></a>) for a range of <span class="math inline">\(w_1 = w_2\)</span> values between 0.1 and 0.4 complementing the values of 0.18, 0.21 and 0.31 from <a href="#sec-pract_2_problem_1" class="quarto-xref"><span>Section 2.2</span></a>. Add these extra data points to your <span class="math inline">\(SM\)</span>-<span class="math inline">\(EF\)</span> graph.</p>
+<section id="task-a-2" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="task-a-2"><span class="header-section-number">2.3.1</span> Task A</h3>
+<p>According to <span class="citation" data-cites="Seneviratne_2010">Seneviratne et al. (<a href="references.html#ref-Seneviratne_2010" role="doc-biblioref">2010</a>)</span>, a linear relationship between <span class="math inline">\(EF\)</span> and <span class="math inline">\(SM\)</span> is a good approximation for <span class="math inline">\(SM\)</span> between critical and wilting point. Do the model results of CLASS confirm this hypothesis?</p>
+</section>
+<section id="task-b-1" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="task-b-1"><span class="header-section-number">2.3.2</span> Task B</h3>
+<p>Do you suspect the existence of some critical, i.e.&nbsp;maximum and minimum <span class="math inline">\(EF\)</span> values? If yes, what would the min and max <span class="math inline">\(EF\)</span> values be in your case?</p>
+</section>
+<section id="task-c-1" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="task-c-1"><span class="header-section-number">2.3.3</span> Task C</h3>
+<p>The <span class="math inline">\(EF\)</span>-<span class="math inline">\(SM\)</span> curve that you built is often used in classical hydrology and climate science to illustrate the coupling (strength of dependence) of <span class="math inline">\(EF\)</span> to <span class="math inline">\(SM\)</span>, helping to differentiate between the regimes of water and energy limitation.</p>
+<p>Examine your <span class="math inline">\(EF\)</span>-<span class="math inline">\(SM\)</span> curve and characterize the <span class="math inline">\(EF\)</span>-<span class="math inline">\(SM\)</span> relationship in terms of coupling regimes. Can you define three soil moisture ranges which differ in the strength of the coupling between <span class="math inline">\(SM\)</span> and <span class="math inline">\(EF\)</span> ?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To define the <span class="math inline">\(SM\)</span> values which mark the transition between two regimes, reflect on the concepts of critical <span class="math inline">\(SM\)</span> and permanent wilting point.</p>
+</div>
+</div>
+<p>Additionally, decide in which regime the soil moisture conditions in West Flanders and East Wallonia fall. In which of the two regions is the EF-SM coupling the strongest?</p>
+</section>
+</section>
+<section id="additional-influence-of-vegetation" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="additional-influence-of-vegetation"><span class="header-section-number">2.4</span> Additional influence of vegetation</h2>
+<p>Until now, only the effect of different soil moisture amounts on the partitioning of the energy available at the surface was considered. Remember however that soil moisture depletion is strongly regulated by both vegetation conditions and soil properties.</p>
+<ul>
+<li>The soil regulates depletion of soil moisture via water infiltration and evaporation linked to <strong>soil structure and porosity</strong>.</li>
+<li>Vegetation controls the depletion of soil moisture via its <strong>root-stem-leaf system</strong> functionality and its featured type of <strong>response to the environmental conditions</strong>. Hence, different vegetation and soil conditions will result in different <span class="math inline">\(EF\)</span> values, and hence, the <span class="math inline">\(EF\)</span>-<span class="math inline">\(SM\)</span> relationship will change.</li>
+</ul>
+<p>In CLASS, the effect of both soil and vegetation type can be explored. Under the <code>Surface</code> tab (subsection <code>Surface properties</code>), one can select:</p>
+<ul>
+<li>Dominant vegetation cover: short grass (default), broadleaf trees and needleleaf trees</li>
+<li>Soil type: sandy loam (default), sand and clay</li>
+</ul>
+<p>For the remainder of the practical, we’ll focus on the effect of vegetation on the surface energy partition, while keeping the default soil type across simulations.</p>
+</section>
+<section id="sec-pract_2_problem_3" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-pract_2_problem_3"><span class="header-section-number">2.5</span> Problem 3</h2>
+<p>As mentioned above, the goal is to now explore the effect of different vegetation conditions on the partitioning of surface energy into heat and moisture fluxes and on the <span class="math inline">\(EF\)</span>-<span class="math inline">\(SM\)</span> relationship. More specifically, the focus will be on the difference between short grass (reflective of the dominant vegetation cover in West Flanders) and broadleaf trees (reflective of the dominant vegetation cover in East Wallonia).</p>
+<p>To set up the simulations, first clone experiment <span class="math inline">\(C\)</span> from <a href="#sec-pract_2_problem_1" class="quarto-xref"><span>Section 2.2</span></a>. This simulation is for short grass (<span class="math inline">\(SG\)</span>). Now clone the latter experiment, and under the <code>Surface</code> tab, change the dominant vegetation cover from short grass to broadleaf trees, yielding a new experiment abbreviated by <span class="math inline">\(BT\)</span>. By this change, key parameters influencing the calculation of <span class="math inline">\(r_s\)</span> are altered such as <span class="math inline">\(LAI\)</span> and <span class="math inline">\(r_{s,min}\)</span> parameter from the Jarvis-Stewart model (see introductory slides)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. For simplicity, we only want to focus on the effects of vegetation type on <span class="math inline">\(r_s\)</span>. Therefore, change following parameters for the <span class="math inline">\(BT\)</span> experiment in the <code>Adv. surf</code> tab:</p>
+<ul>
+<li>Thermal conductivity of the skin layer <span class="math inline">\(\Lambda\)</span>: change the value from 20 W m<span class="math inline">\(^{-2}\)</span> K<span class="math inline">\(^{-1}\)</span> (the default for broadleaf trees) to 5.9 W m<span class="math inline">\(^{-2}\)</span> K<span class="math inline">\(^{-1}\)</span> (the default value for short grass). In this way, <span class="math inline">\(SG\)</span> and <span class="math inline">\(BT\)</span> have the same <span class="math inline">\(\Lambda\)</span> and consequently the calculation of <span class="math inline">\(G\)</span> via<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> <span class="math inline">\(G = \Lambda (T_s - T_{\text{soil}1})\)</span> (where <span class="math inline">\(T_{\text{soil}1}\)</span> is the surface soil temperature) is not influenced by the vegetation type.</li>
+<li>Fraction of surface covered by vegetation <span class="math inline">\(C_{\text{veg}}\)</span>: change the value from 0.9 (the default for broadleaf trees) to 0.85 (the default value for short grass). In this way, <span class="math inline">\(SG\)</span> and <span class="math inline">\(BT\)</span> have the same <span class="math inline">\(C_{\text{veg}}\)</span> and consequently the calculation of the partitioning of <span class="math inline">\(\lambda E\)</span> between soil evaporation, transpiration and interception<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> is only effected by the magnitude of these fluxes, not the fraction of vegetation cover.</li>
+</ul>
+<section id="task-a-3" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="task-a-3"><span class="header-section-number">2.5.1</span> Task A</h3>
+<p>By comparing <span class="math inline">\(SG\)</span> and <span class="math inline">\(BT\)</span>, how did <span class="math inline">\(EF\)</span> change over forest compared to over grass?</p>
+</section>
+<section id="task-b-2" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="task-b-2"><span class="header-section-number">2.5.2</span> Task B</h3>
+<p>As mentioned above, the <span class="math inline">\(LAI\)</span> differs between <span class="math inline">\(BT\)</span> (<span class="math inline">\(LAI = 5\)</span>) and <span class="math inline">\(SG\)</span> (<span class="math inline">\(LAI = 2\)</span>). To isolate the effect of <span class="math inline">\(LAI\)</span>, clone the <span class="math inline">\(BT\)</span> experiment, call it <span class="math inline">\(BT_{LAI2}\)</span> and change <span class="math inline">\(LAI\)</span> to 2 in the <code>Adv. surf</code> tab. By comparing <span class="math inline">\(r_s\)</span> and <span class="math inline">\(\lambda E\)</span> between <span class="math inline">\(BT\)</span> and <span class="math inline">\(BT_{LAI2}\)</span>, explore following feedback loop by completing <a href="#fig-feedback_LAI_rs" class="quarto-xref">Figure&nbsp;<span>2.2</span></a> with dashed or full arrows (again following the convention from <a href="practical_1.html#sec-feedback" class="quarto-xref"><span>Section 1.5.3</span></a>).</p>
+<div id="fig-feedback_LAI_rs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-feedback_LAI_rs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["$$LAI$$"]
+    B["$$r_s$$"]
+    C["$$\lambda E$$"]
+    D["$$EF$$"]
+
+    A ~~~ B
+    B ~~~ C
+    C ~~~ D  
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-feedback_LAI_rs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Feedback diagram illustrating the effect of <span class="math inline">\(LAI\)</span> on surface fluxes
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="task-c-2" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="task-c-2"><span class="header-section-number">2.5.3</span> Task C</h3>
+<p>Another effect to explore is related to the optimal opening of the stomata in forest leaves and in grass leaves, which is captured by the <span class="math inline">\(r_{s,min}\)</span> parameter in CLASS. A higher <span class="math inline">\(r_{s,min}\)</span> value corresponds to more sensitive stomata (i.e.&nbsp;plants showing more isohydric behaviour, see theory lecture 7)</p>
+<p>Comparing <span class="math inline">\(BT\)</span> and <span class="math inline">\(SG\)</span>, <span class="math inline">\(r_{s,min}\)</span> values are 200 s m<span class="math inline">\(^{-1}\)</span> and 110 s m<span class="math inline">\(^{-1}\)</span> respectively. To isolate the effect of <span class="math inline">\(r_{s,min}\)</span>, clone the <span class="math inline">\(BT\)</span> experiment, call it <span class="math inline">\(BT_{rsmin110}\)</span> and change <span class="math inline">\(r_{s,min}\)</span> to 110 s m<span class="math inline">\(^{-1}\)</span> in the <code>Adv. surf</code> tab. By comparing <span class="math inline">\(r_s\)</span> and <span class="math inline">\(\lambda E\)</span> between <span class="math inline">\(BT\)</span> and <span class="math inline">\(BT_{rsmin110}\)</span>, explore following feedback loop by completing <a href="#fig-feedback_rsmin_rs" class="quarto-xref">Figure&nbsp;<span>2.3</span></a> with dashed or full arrows.</p>
+<div id="fig-feedback_rsmin_rs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-feedback_rsmin_rs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["$$r_{s,min}$$"]
+    B["$$r_s$$"]
+    C["$$\lambda E$$"]
+    D["$$EF$$"]
+
+    A ~~~ B
+    B ~~~ C
+    C ~~~ D  
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-feedback_rsmin_rs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Feedback diagram illustrating the effect of <span class="math inline">\(r_{s,min}\)</span> on surface fluxes
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="task-d" class="level3" data-number="2.5.4">
+<h3 data-number="2.5.4" class="anchored" data-anchor-id="task-d"><span class="header-section-number">2.5.4</span> Task D</h3>
+<p>Summarize the effect of the different vegetation cover types on surface fluxes by completing the feedback diagram in <a href="#fig-feedback_combined_rs" class="quarto-xref">Figure&nbsp;<span>2.4</span></a>. Which of the two feedback mechanisms covered above dominates the overall effect of going from <span class="math inline">\(SG\)</span> to <span class="math inline">\(BT\)</span>?</p>
+<div id="fig-feedback_combined_rs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-feedback_combined_rs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-fig-width="6" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["$$SG \text{ to } BT$$"]
+    B["$$LAI$$"]
+    C["Isohydricity"]
+    D["$$r_s$$"]
+    E["$$r_{s,min}$$"]
+    F["$$\lambda E$$"]
+    G["$$H$$"]
+    H["$$EF$$"]
+
+    A ~~~ B &amp; C
+    B &amp; C ~~~ D &amp; E
+    D &amp; E ~~~ F &amp; G
+    F &amp; G ~~~ H  
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-feedback_combined_rs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: Feedback diagram illustrating the effect of different vegetation cover types on the surface fluxes via the concept of <span class="math inline">\(r_s\)</span>
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-pract_2_problem_4" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-pract_2_problem_4"><span class="header-section-number">2.6</span> Problem 4</h2>
+<p>After investigating the effect of SM (see <a href="#sec-pract_2_problem_1" class="quarto-xref"><span>Section 2.2</span></a> and <a href="#sec-pract_2_problem_2" class="quarto-xref"><span>Section 2.3</span></a>) and vegetation (see <a href="#sec-pract_2_problem_3" class="quarto-xref"><span>Section 2.5</span></a>) in isolation, we’re now interested in simulating the combined effect of high <span class="math inline">\(SM\)</span> and broadleaf tree vegetation cover, as present in East Wallonia.</p>
+<section id="task-a-4" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="task-a-4"><span class="header-section-number">2.6.1</span> Task A</h3>
+<p>To set up a model simulation reflecting the East Wallonia conditions, clone the <span class="math inline">\(BT\)</span> experiment, give it a new name (<span class="math inline">\(EW\)</span>) and modify <span class="math inline">\(w_1\)</span> and <span class="math inline">\(w_2\)</span> in the <code>Adv. surf</code> tab to 0.31 (as defined in <a href="#tbl-surface_conditions" class="quarto-xref">Table&nbsp;<span>2.1</span></a>). After simulation, calculate the daily <span class="math inline">\(EF\)</span> (as done in <a href="#sec-daily_EF" class="quarto-xref"><span>Section 2.2.4</span></a>). Next, add this point on the <span class="math inline">\(EF\)</span>-<span class="math inline">\(SM\)</span> diagram created in <a href="#sec-pract_2_problem_1" class="quarto-xref"><span>Section 2.2</span></a> and mark it in a way that differentiates as the point valid for <span class="math inline">\(EW\)</span>. Does the forest covert shift the coupling relationship up (i.e.&nbsp;higher <span class="math inline">\(EF\)</span> for the same <span class="math inline">\(SM\)</span>) or down?</p>
+</section>
+<section id="task-b-3" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="task-b-3"><span class="header-section-number">2.6.2</span> Task B</h3>
+<p>Complete <a href="#tbl-results" class="quarto-xref">Table&nbsp;<span>2.2</span></a> and summarize the effect of different land surface conditions over the country (West Flanders versus East Wallonia) on partitioning of the surface energy into heat and moisture fluxes. Additionally, discuss the potential implications for the ABL temperature and the likelihood of heatwave development in the two regions</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember that the <span class="math inline">\(D\)</span> experiment is reflective of West Flanders (dry and short grass), while the <span class="math inline">\(EW\)</span> experiment is reflective of East Wallonia (wet and broadleaf trees).</p>
+</div>
+</div>
+<div class="cell" data-execution_count="1">
+<div id="tbl-results" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.2: Summarising the effect of <span class="math inline">\(SM\)</span> on atmospheric conditions. To be filled in after completing the problem in <a href="#sec-pract_2_problem_4" class="quarto-xref"><span>Section 2.6</span></a>.
+</figcaption>
+<div aria-describedby="tbl-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
+<table class="cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th style="text-align: left;">Daily <span class="math inline">\(EF\)</span></th>
+<th style="text-align: left;">SM-EF coupling regime</th>
+<th style="text-align: left;">Likelihood of heatwave</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>West Flanders</td>
+<td></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td>East Wallonia</td>
+<td></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="task-c-3" class="level3" data-number="2.6.3">
+<h3 data-number="2.6.3" class="anchored" data-anchor-id="task-c-3"><span class="header-section-number">2.6.3</span> Task C</h3>
+<p>Does the presence of forests enhance or dampen the likelihood of higher temperatures over East Wallonia (as specified in <a href="#tbl-surface_conditions" class="quarto-xref">Table&nbsp;<span>2.1</span></a>)?</p>
+</section>
+</section>
+<section id="the-influence-of-the-atmosphere-on-the-surface-fluxes" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="the-influence-of-the-atmosphere-on-the-surface-fluxes"><span class="header-section-number">2.7</span> The influence of the atmosphere on the surface fluxes</h2>
+<p>As mentioned in the introductory slides, it is important to remember that in this practical the mixed layer model is not activated. Consequently, the non-negligible influence of atmospheric conditions on the magnitude of the surface fluxes is ignored here. Without going into quantitative simulations, a non-exhaustive list of possible effects is given below:</p>
+<ul>
+<li><span class="math inline">\(\langle \theta \rangle\)</span> and <span class="math inline">\(\langle q \rangle\)</span> from the ABL influence the gradient of temperature and humidity between surface and atmosphere, hence altering the magnitude of <span class="math inline">\(H\)</span> and <span class="math inline">\(\lambda E\)</span> (think of the bulk resistance approach from theory lecture 5)</li>
+<li>Both wind speed and atmospheric stability influence the aerodynamic resistance <span class="math inline">\(r_a\)</span>, which determines <span class="math inline">\(H\)</span> and <span class="math inline">\(\lambda E\)</span>.</li>
+<li>The plant stomata their functioning is dependent on several atmospheric states such as <span class="math inline">\(\langle \theta \rangle\)</span>, <span class="math inline">\(\langle q \rangle\)</span> and <span class="math inline">\(CO_2\)</span>.</li>
+</ul>
+</section>
+<section id="voluntary-problem-5" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="voluntary-problem-5"><span class="header-section-number">2.8</span> Voluntary problem 5</h2>
+<p>There are many relationships still unexplored<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. In this <strong>voluntary</strong> problem, the effect of a higher air temperature on the partitioning of the fluxes is investigated. Consistent with the other problems of this practical, the mixed layer model is still not used, making <span class="math inline">\(\langle \theta \rangle\)</span> constant throughout the duration of the simulation.</p>
+<section id="task-a-5" class="level3" data-number="2.8.1">
+<h3 data-number="2.8.1" class="anchored" data-anchor-id="task-a-5"><span class="header-section-number">2.8.1</span> Task A</h3>
+<p>As a control experiment, <span class="math inline">\(C\)</span> from <a href="#sec-pract_2_problem_1" class="quarto-xref"><span>Section 2.2</span></a> is used. The new experiment with a warmer ABL (named <span class="math inline">\(WA\)</span>), has a <span class="math inline">\(\langle \theta \rangle\)</span> of 300 K. To make the comparison fair, we want to assure the following:</p>
+<ol type="1">
+<li>Relative humidity (<span class="math inline">\(RH\)</span>) should be the same for <span class="math inline">\(WA\)</span> and <span class="math inline">\(C\)</span>. Recall from lecture 2 of the theory that <span class="math inline">\(RH\)</span> [%] is defined as <span class="math display">\[RH = e/e^*\]</span> with <span class="math inline">\(e\)</span> vapour pressure [Pa] and <span class="math inline">\(e^*\)</span> the saturated vapour pressure [Pa]. The latter can be calculated in function of air temperature (<span class="math inline">\(T\)</span> in °C) with the Tetens equation: <span class="math display">\[ e^* = 610.78 \exp \left( \frac{17.27T}{237.3 + T}\right) \]</span> Additionally, we know that <span class="math display">\[q = 0.622 \frac e p\]</span> with <span class="math inline">\(p\)</span> the total atmospheric pressure [Pa]. With this information, calculate the <span class="math inline">\(\langle q \rangle\)</span> for <span class="math inline">\(WA\)</span> based on <span class="math inline">\(\langle q \rangle\)</span> for <span class="math inline">\(C\)</span> so that <span class="math inline">\(RH\)</span> is the same for both scenarios.</li>
+<li>To assure a similar temperature gradient between the atmosphere and surface for both experiments, the (initial) values of <span class="math inline">\(T_{\text{soil}1}\)</span> and <span class="math inline">\(T_{\text{soil}2}\)</span> (the deep soil temperature)<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. In <span class="math inline">\(C\)</span>, the differences (i.e.&nbsp;“gradient”) between <span class="math inline">\(\langle \theta \rangle = 288\)</span> K and <span class="math inline">\(T_{\text{soil}1} = 285\)</span> K and <span class="math inline">\(T_{\text{soil}2} = 286\)</span> K are 3 and 4 K respectively. Adapt <span class="math inline">\(T_{\text{soil}1}\)</span> and <span class="math inline">\(T_{\text{soil}2}\)</span> for <span class="math inline">\(WA\)</span> to have identical differences.</li>
+</ol>
+</section>
+<section id="task-b-4" class="level3" data-number="2.8.2">
+<h3 data-number="2.8.2" class="anchored" data-anchor-id="task-b-4"><span class="header-section-number">2.8.2</span> Task B</h3>
+<p>Once experiments <span class="math inline">\(C\)</span> and <span class="math inline">\(WA\)</span> are simulated, describe the diurnal variability of the <span class="math inline">\(H\)</span> and <span class="math inline">\(\lambda E\)</span> under these different <span class="math inline">\(\langle \theta \rangle\)</span> values.</p>
+<p>Additionally, complete the feedback diagrams give in <a href="#fig-feedback_theta_1" class="quarto-xref">Figure&nbsp;<span>2.5</span></a> and <a href="#fig-feedback_theta_2" class="quarto-xref">Figure&nbsp;<span>2.6</span></a>. Remember that <span class="math inline">\(VPD = e^* - e\)</span> stands for vapour pressure deficit. Based on your results, which one is dominating in this case?</p>
+<div id="fig-feedback_theta_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-feedback_theta_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["$$\langle \theta \rangle$$"]
+    B["$$VPD$$"]
+    C["$$\lambda E$$"]
+    D["$$H$$"]
+
+    A ~~~ B
+    B ~~~ C
+    C ~~~ D  
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-feedback_theta_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.5: Feedback diagram illustrating the effect of <span class="math inline">\(\langle \theta \rangle\)</span> on the surface fluxes via evaporative demand
+</figcaption>
+</figure>
+</div>
+<div id="fig-feedback_theta_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-feedback_theta_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["$$\langle \theta \rangle$$"]
+    B["$$VPD$$"]
+    C["$$r_s$$"]
+    D["$$\lambda E$$"]
+    E["$$H$$"]
+
+    A ~~~ B
+    B ~~~ C
+    C ~~~ D 
+    D ~~~ E  
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-feedback_theta_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.6: Feedback diagram illustrating the effect of <span class="math inline">\(\langle \theta \rangle\)</span> on the surface fluxes via <span class="math inline">\(r_s\)</span>
+</figcaption>
+</figure>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Seneviratne_2010" class="csl-entry" role="listitem">
+Seneviratne, Sonia I., Thierry Corti, Edouard L. Davin, et al. 2010. <span>“Investigating Soil Moisture–Climate Interactions in a Changing Climate: A Review.”</span> <em>Earth-Science Reviews</em> 99 (3): 125–61. <a href="https://doi.org/10.1016/j.earscirev.2010.02.004">https://doi.org/10.1016/j.earscirev.2010.02.004</a>.
+</div>
+<div id="ref-ABL_handbook" class="csl-entry" role="listitem">
+Vilà-Guerau de Arellano, Jordi, Chiel C. van Heerwaarden, Bart J. H. van Stratum, and Kees van den Dries. 2015. <em>Atmospheric Boundary Layer: Integrating Air Chemistry and Land Interactions</em>. Cambridge University Press.
+</div>
+</div>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>The reasoning here is that in this way, we exclude the effect of roughness on the aerodynamic resistance<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>For more details on the land surface model in CLASS, the reader is referred to Chapter 9 of <span class="citation" data-cites="ABL_handbook">Vilà-Guerau de Arellano et al. (<a href="references.html#ref-ABL_handbook" role="doc-biblioref">2015</a>)</span>, which can als be found on <a href="https://ufora.ugent.be/d2l/le/content/1035474/viewContent/2563893/View">Ufora</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Equation 9.33 from Chapter 9 of <span class="citation" data-cites="ABL_handbook">Vilà-Guerau de Arellano et al. (<a href="references.html#ref-ABL_handbook" role="doc-biblioref">2015</a>)</span><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Equation 9.14 from Chapter 9 of <span class="citation" data-cites="ABL_handbook">Vilà-Guerau de Arellano et al. (<a href="references.html#ref-ABL_handbook" role="doc-biblioref">2015</a>)</span><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>For the very curious, plenty of additional experiments can be found in <span class="citation" data-cites="ABL_handbook">Vilà-Guerau de Arellano et al. (<a href="references.html#ref-ABL_handbook" role="doc-biblioref">2015</a>)</span><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Intuitively, also between <span class="math inline">\(T_s\)</span> and <span class="math inline">\(\langle \theta \rangle\)</span> a similar gradient should be maintained. The <span class="math inline">\(T_s\)</span> value set in the <code>Surface</code> tab (290K for <span class="math inline">\(C\)</span>) does not influence the simulations however when the <code>Surface scheme</code> box is ticked (and hence the land surface model is run), as <span class="math inline">\(T_s\)</span> is calculated without needing an initial value and is based on (amongst others) <span class="math inline">\(\langle \theta \rangle\)</span> (see Equation 9.17 of <span class="citation" data-cites="ABL_handbook">Vilà-Guerau de Arellano et al. (<a href="references.html#ref-ABL_handbook" role="doc-biblioref">2015</a>)</span>).<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./practical_1.html" class="pagination-link" aria-label="Practical 1: Atmospheric state and forcings">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Practical 1: Atmospheric state and forcings</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
