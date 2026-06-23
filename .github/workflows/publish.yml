@@ -22,6 +22,10 @@ jobs:
           version: 1.7.32
           tinytex: true
 
+      - name: Get environment name from environment.yml
+        id: get-env-name
+        run: echo "ENV_NAME=$(yq '.name' environment.yml)" >> "$GITHUB_OUTPUT"
+
       - name: Setup Python with Miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
