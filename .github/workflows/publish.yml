@@ -19,38 +19,40 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          version: 1.7.32
+          version: 1.9.38
           tinytex: true
 
       - name: Setup Python with Miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
           environment-file: environment.yml
-          activate-environment: la_interactions_quarto
+          activate-environment: ${{ steps.get-env-name.outputs.ENV_NAME }}
           auto-activate-base: false
 
-      - name: Install Chrome
-        id: setup-chrome
-        uses: browser-actions/setup-chrome@v2
-        with:
-          install-dependencies: true 
+      - name: Install Chrome Headless Shell
+        shell: bash -el {0}
+        run: quarto install chrome-headless-shell --no-prompt
 
       - name: Check Quarto and dependencies
         shell: bash -el {0}
-        env:
-          QUARTO_CHROMIUM: ${{ steps.setup-chrome.outputs.chrome-path }}
         run: quarto check
 
       - name: Render and Publish 
         shell: bash -el {0}
         env:
-          QUARTO_CHROMIUM: ${{ steps.setup-chrome.outputs.chrome-path }}
-          QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
-        run: quarto publish quarto-pub --no-browser --no-prompt
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          quarto publish gh-pages --no-browser --no-prompt
+
+      - name: Get book title from _quarto.yml
+        id: get-book-title
+        run: echo "BOOK_TITLE=$(yq '.book.title' _quarto.yml)" >> "$GITHUB_OUTPUT"
 
       - name: Save PDF as artifact
         uses: actions/upload-artifact@v4
         with:
-          path: _book/Land-Atmosphere-Interactions--Practicals.pdf
+          path: _book/${{ steps.get-book-title.outputs.BOOK_TITLE }}.pdf
           retention-days: 90
           name: rendered_pdf_artifact
