@@ -1,15 +1,15 @@
 # Land_Atmosphere_interactions_notes
 
-Repository containing the practical material for the course of [Land-Atmosphere Interactions](https://studiekiezer.ugent.be/2025/studiefiche/en/I002451). This course materials is also hosted as a website at https://olivierbonte.github.io/land-atmosphere-interactions-public/.
+Repository containing the practical material for the course of [Land-Atmosphere Interactions](https://studiekiezer.ugent.be/2025/studiefiche/en/I002451). This course materials is also hosted as a website at https://h-cel.github.io/land-atmosphere-interactions-public/.
 
-The assignment (without solutions) can be found on a [public repository](https://github.com/olivierbonte/land-atmosphere-interactions-public). The solutions are in a [private repository](https://github.com/olivierbonte/land-atmosphere-interactions), access to which can be granted upon [contacting me](mailto:olivier.bonte@hotmail.com).
+The assignment (without solutions) can be found on a [public repository](https://github.com/h-cel/land-atmosphere-interactions-public). The solutions are in a [private repository](https://github.com/h-cel/land-atmosphere-interactions), access to which can be granted upon [contacting me](mailto:olivier.bonte@hotmail.com).
 
 ## Installation instructions (local setup)
 
 First, make a local copy of this repository using
 
 ```
-git clone https://github.com/olivierbonte/land-atmosphere-interactions-public.git
+git clone https://github.com/h-cel/land-atmosphere-interactions-public.git
 ```
 
 or download as zip file and unzip. In each case, make sure to navigate inside the `land-atmosphere-interactions-public` folder before executing any of the command line interface (CLI) instructions below.

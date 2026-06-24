@@ -15,7 +15,7 @@ book:
     - practical_2.qmd
     - references.qmd
   downloads: [pdf]
-  repo-url: https://github.com/olivierbonte/Land_Atmosphere_interactions_notes_public
+  repo-url: https://github.com/h-cel/land-atmosphere-interactions-public
   navbar: 
     title: "Land-Atmosphere Interactions: Practicals"
     search: true 
